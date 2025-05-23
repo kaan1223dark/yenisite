@@ -28,7 +28,7 @@ export default function EventsPreview({
             className="btn btn-primary z-10 px-4 py-2 text-lg max-md:text-base"
             href={`/${lang}/events`}
           >
-            {dictionary.pages_home.events_preview.see_all}
+            {dictionary.pages_home.events_preview.event_calendar}
           </Link>
         </div>
       </div>

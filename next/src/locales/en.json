@@ -223,7 +223,9 @@
     "events_preview": {
       "title": "Upcoming Events",
       "subtitle": "Check out what's happening",
-      "see_all": "See all events"
+      "event_calendar": "Event Calendar",
+      "event_groups": "Event Groups",
+      "courses_and_private_lessons": "Courses and Private Lessons"
     },
     "news": {
       "title": "Our Latest News",

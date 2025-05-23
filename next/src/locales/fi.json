@@ -77,7 +77,7 @@
     "login": "Giriş",
     "register": "Rekisteröidy",
     "on_this_page": "Tällä sivulla",
-    "partners": "Yhteistyössä",
+    "partners": "ortaklar",
     "business_id": "Y-tunnus",
     "copy": "Kopioi",
     "logout": "Kirjaudu ulos",
@@ -221,9 +221,11 @@
       "contact": "Yhteystiedot"
     },
     "events_preview": {
-      "title": "Tulevat tapahtumat",
-      "subtitle": "Kurkista mitä on tulossa!",
-      "see_all": "Kaikki tapahtumat"
+      "title": "yaklaşan etkinlikler",
+      "subtitle": "Yakında neler olacağına bir göz atın!",
+      "event_calendar": "Etkinlik Takvimi",
+      "event_groups": "Etkinlik Gurupları",
+      "courses_and_private_lessons": "Kurslar ve Özel Dersler"
     },
     "news": {
       "title": "Son Haberlerimiz",

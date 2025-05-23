@@ -1,6 +1,6 @@
 import Banner from '@/components/Banner/Banner';
 import Discover from '@/components/Discover/Discover';
-import EventsPreview from '@/components/EventsPreview/EventsPreview';
+import EventsPreview from '@/components/EventsPreview/EventsPreviewcopy';
 import Hero from '@/components/Hero/Hero';
 import NewsPreview from '@/components/NewsPreview/NewsPreview';
 import Partners from '@/components/Partners/Partners';
@@ -28,9 +28,10 @@ export default async function Home(props: HomeProps) {
         type="application/ld+json"
       />
       <Banner lang={params.lang} />
-      <Hero dictionary={dictionary} lang={params.lang} />
-      <Discover dictionary={dictionary} lang={params.lang} />
       <EventsPreview dictionary={dictionary} lang={params.lang} />
+      <Discover dictionary={dictionary} lang={params.lang} />
+      <Hero dictionary={dictionary} lang={params.lang} />
+
       <NewsPreview dictionary={dictionary} lang={params.lang} />
       <TelegramPreview dictionary={dictionary} />
       <Partners dictionary={dictionary} lang={params.lang} />
