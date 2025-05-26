@@ -35,4 +35,6 @@ export default function EventsPreview({
       <div className="luuppi-kolmio-pattern absolute left-0 top-0 -z-0 h-full w-full" />
     </section>
   );
+
+  // kaankaaan
 }
