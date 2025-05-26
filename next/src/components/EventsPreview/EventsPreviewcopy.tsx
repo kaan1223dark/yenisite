@@ -12,53 +12,55 @@ export default function EventsPreview({
   lang,
 }: EventsPreviewProps) {
   return (
-    <section className="relative bg-gray-100 py-16">
-      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        {/* Title and Subtitle */}
-        <div className="text-center">
-          <p className="text-base font-semibold uppercase tracking-wide text-indigo-600">
+    <section className="relative bg-[#f5f7fa] py-12 sm:py-16 lg:py-20">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Başlıklar */}
+        <div className="mb-8 text-center sm:mb-10">
+          <p className="text-sm font-semibold uppercase tracking-wide text-indigo-600 sm:text-base">
             {dictionary.pages_home.events_preview.subtitle ||
               'Yakında neler olacağına bir göz atın!'}
           </p>
-          <h2 className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="mt-2 text-2xl font-extrabold text-gray-900 sm:text-3xl md:text-4xl">
             {dictionary.pages_home.events_preview.title ||
               'Yaklaşan Etkinlikler'}
           </h2>
         </div>
 
-        {/* Event Grid */}
-        <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
+        {/* Etkinlik Kartları */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <RenderEvents dictionary={dictionary} lang={lang} />
         </div>
 
-        {/* See All Events Buttons */}
-        <div className="mt-8 flex justify-center space-x-4">
+        {/* Butonlar */}
+        <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
           <Link
-            className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700"
+            className="w-full rounded-xl bg-indigo-600 px-8 py-5 text-center text-xl font-bold text-white shadow-lg transition duration-200 hover:bg-indigo-700 sm:w-auto"
             href={`/${lang}/events`}
           >
             {dictionary.pages_home.events_preview.event_calendar ||
               'Etkinlik Takvimi'}
           </Link>
           <Link
-            className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700"
+            className="w-full rounded-xl bg-indigo-600 px-8 py-5 text-center text-xl font-bold text-white shadow-lg transition duration-200 hover:bg-indigo-700 sm:w-auto"
             href={`/${lang}/events`}
           >
             {dictionary.pages_home.events_preview.event_groups ||
-              'Etkinlik Gurupları'}
+              'Etkinlik Grupları'}
           </Link>
           <Link
-            className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700"
+            className="w-full rounded-xl bg-indigo-600 px-8 py-5 text-center text-xl font-bold text-white shadow-lg transition duration-200 hover:bg-indigo-700 sm:w-auto"
             href={`/${lang}/events`}
           >
             {dictionary.pages_home.events_preview.courses_and_private_lessons ||
-              'Kurs ve Özel Ders'}
+              'Kurslar ve Özel Dersler'}
           </Link>
         </div>
       </div>
 
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-25" />
+      {/* Opsiyonel arka plan deseni */}
+      <div className="absolute inset-0 opacity-10" />
     </section>
   );
+
+  // deneme
 }
