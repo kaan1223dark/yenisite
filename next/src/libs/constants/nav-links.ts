@@ -22,38 +22,6 @@ export const navLinksDesktop: NavLink[] = [
         translation: 'introduction',
         href: '/organization',
       },
-      {
-        translation: 'rules',
-        href: '/organization/rules',
-      },
-      {
-        translation: 'board',
-        href: '/organization/board',
-      },
-      {
-        translation: 'office',
-        href: '/organization/office',
-      },
-      {
-        translation: 'tradition_guidelines',
-        href: '/organization/tradition-guidelines',
-      },
-      {
-        translation: 'honorary_members',
-        href: '/organization/honorary-members',
-      },
-      {
-        translation: 'member_benefits',
-        href: '/organization/benefits',
-      },
-      {
-        translation: 'songbook',
-        href: '/organization/songbook',
-      },
-      {
-        translation: 'documents',
-        href: '/organization/documents',
-      },
     ],
   },
   {
@@ -87,42 +55,8 @@ export const navLinksDesktop: NavLink[] = [
     ],
   },
   {
-    translation: 'collaboration',
-    sublinks: [
-      {
-        translation: 'general',
-        href: '/collaboration',
-      },
-      {
-        translation: 'companies',
-        href: '/collaboration/companies',
-      },
-    ],
-  },
-  {
-    translation: 'communication',
-    sublinks: [
-      {
-        translation: 'news',
-        href: '/news',
-      },
-      {
-        translation: 'sanomat',
-        href: '/luuppi-sanomat',
-      },
-      {
-        translation: 'gallery',
-        href: 'https://luuppiry.kuvat.fi/kuvat/',
-      },
-    ],
-  },
-  {
     translation: 'events',
     href: '/events',
-  },
-  {
-    translation: 'sports',
-    href: '/sports',
   },
   {
     translation: 'contact',
