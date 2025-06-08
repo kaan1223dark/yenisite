@@ -59,7 +59,7 @@ export async function reservationChargeAll(lang: SupportedLanguage) {
           reservations: registrations.map((registration) => ({
             id: registration.id.toString(),
             priceInCents: registration.price * 100,
-            name: registration.event[lang === 'fi' ? 'nameFi' : 'nameEn'],
+            name: registration.event[lang === 'tr' ? 'nameFi' : 'nameEn'],
             confirmationTime: registration.createdAt.toISOString(),
           })),
         },

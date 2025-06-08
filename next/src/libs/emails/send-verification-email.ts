@@ -21,7 +21,7 @@ export async function sendVerificationEmail({
   language,
 }: SendVerificationEmailParams) {
   const emailHtml = await render(
-    language === 'fi'
+    language === 'tr'
       ? LuuppiEmailVerifyFi({
           name,
           link: verificationLink,

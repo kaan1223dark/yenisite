@@ -118,7 +118,7 @@ export async function reservationQuestionSubmit(
       }
     }
 
-    if (lang === 'fi') {
+    if (lang === 'tr') {
       if (!allowedAnswers.fi.includes(answer.value as string)) {
         logger.error('Invalid answer:', answer.value);
         return {

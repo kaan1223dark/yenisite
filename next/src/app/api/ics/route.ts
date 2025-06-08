@@ -20,7 +20,7 @@ export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
 
   const lang = searchParams.get('lang') as SupportedLanguage | undefined;
-  const allowedLangs = ['en', 'fi'];
+  const allowedLangs = ['en', 'tr'];
 
   if (!lang || !allowedLangs.includes(lang)) {
     return new Response('Invalid lang parameter', { status: 400 });
@@ -42,13 +42,13 @@ export async function GET(request: NextRequest) {
 
   // Format event from raw event data
   const formatEvent = (event: APIResponseData<'api::event.event'>) => ({
-    name: event.attributes[lang === 'fi' ? 'NameFi' : 'NameEn'],
+    name: event.attributes[lang === 'tr' ? 'NameFi' : 'NameEn'],
     id: event.id,
     startDate: new Date(event.attributes.StartDate),
     endDate: new Date(event.attributes.EndDate),
-    location: event.attributes[lang === 'fi' ? 'LocationFi' : 'LocationEn'],
+    location: event.attributes[lang === 'tr' ? 'LocationFi' : 'LocationEn'],
     description: getPlainText(
-      event.attributes[lang === 'fi' ? 'DescriptionFi' : 'DescriptionEn'],
+      event.attributes[lang === 'tr' ? 'DescriptionFi' : 'DescriptionEn'],
     ),
   });
 

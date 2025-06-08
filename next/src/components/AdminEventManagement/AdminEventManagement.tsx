@@ -53,7 +53,7 @@ export default async function AdminEventManagement({
     .filter((event) => event.registrations.length)
     .map((event) => ({
       id: event.id,
-      name: lang === 'fi' ? event.nameFi : event.nameEn,
+      name: lang === 'tr' ? event.nameFi : event.nameEn,
       startDate: new Date(event.startDate),
       registrations: event.registrations.length,
     }));

@@ -101,7 +101,7 @@ export default async function Page(props: {
     '/api/events?pagination[limit]=9999&sort[0]=createdAt:desc&populate=Registration.TicketTypes.Role&populate=Registration.QuestionsText&populate=Registration.QuestionsSelect&populate=Registration.QuestionsCheckbox';
   const strapiEventData = await getStrapiData<
     APIResponseCollection<'api::event.event'>
-  >('fi', url, ['events'], true);
+  >('tr', url, ['events'], true);
 
   if (!strapiEventData) {
     redirect(`/${lang}/admin?mode=user`);

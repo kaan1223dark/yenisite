@@ -21,7 +21,7 @@ export interface GetUsersSuccessResponse {
 export type GetUsersResponse = GetUsersErrorResponse | GetUsersSuccessResponse;
 
 const MAX_PAGE_SIZE = 50;
-const SUPPORTED_LANGUAGES = ['fi', 'en'] as const;
+const SUPPORTED_LANGUAGES = ['tr', 'en'] as const;
 
 export async function GET(
   request: NextRequest,
@@ -30,8 +30,8 @@ export async function GET(
   const page = parseInt(searchParams.get('page') || '1');
   const pageSize = parseInt(searchParams.get('pageSize') || '10');
   const search = searchParams.get('search') || '';
-  const lang = searchParams.get('lang') || 'fi';
-  const dictionary = await getDictionary(lang as 'fi' | 'en');
+  const lang = searchParams.get('lang') || 'tr';
+  const dictionary = await getDictionary(lang as 'tr' | 'en');
 
   if (isNaN(page) || page < 1) {
     logger.error('Invalid page:', page);

@@ -42,9 +42,6 @@ const getStaticPages = (lang: SupportedLanguage) => {
     // Events
     `/${lang}/events`,
 
-    // News
-    `/${lang}/news`,
-
     // Sanomat
     `/${lang}/luuppi-sanomat`,
 
@@ -92,14 +89,6 @@ export async function GET() {
       { hreflang: 'tr', url: url, lang: 'tr' },
       { hreflang: 'en', url: url.replace('/tr/', '/en/'), lang: 'en' },
     ],
-  }));
-
-  const newsData = await getStrapiData<
-    APIResponseCollection<'api::news-single.news-single'>
-  >('tr', '/api/news', ['news-single']);
-  const news = newsData.data.map((news) => ({
-    url: `/tr/news/${news.attributes.slug}`,
-    lastmod: new Date(news.attributes.updatedAt!).toISOString(),
   }));
 
   const boardData = await getStrapiData<
@@ -194,24 +183,6 @@ export async function GET() {
     }),
   );
 
-  const newsSiteMap: SitemapItemLoose[] = news.map((post) => ({
-    url: post.url,
-    lastmod: post.lastmod,
-    links: [
-      { hreflang: 'tr', url: post.url, lang: 'tr' },
-      { hreflang: 'en', url: post.url.replace('/tr/', '/en/'), lang: 'en' },
-    ],
-  }));
-
-  const newsSiteMapEn: SitemapItemLoose[] = news.map((post) => ({
-    url: post.url.replace('/tr/', '/en/'),
-    lastmod: post.lastmod,
-    links: [
-      { hreflang: 'en', url: post.url.replace('/tr/', '/en/'), lang: 'en' },
-      { hreflang: 'tr', url: post.url, lang: 'tr' },
-    ],
-  }));
-
   const boardPagesSiteMap: SitemapItemLoose[] = boardPages.map((page) => ({
     url: page.url,
     lastmod: page.lastmod,
@@ -251,9 +222,7 @@ export async function GET() {
   );
 
   const sitemap: SitemapItemLoose[] = [
-    ...newsSiteMap,
     ...boardPagesSiteMap,
-    ...newsSiteMapEn,
     ...boardPagesSiteMapEn,
     ...staticFinnishSitemap,
     ...staticEnglishSitemap,
@@ -283,3 +252,4 @@ export async function GET() {
 
   return res;
 }
+

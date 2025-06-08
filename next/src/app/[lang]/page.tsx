@@ -1,10 +1,4 @@
 import Banner from '@/components/Banner/Banner';
-import Discover from '@/components/Discover/Discover';
-import EventsPreview from '@/components/EventsPreview/EventsPreviewcopy';
-import Hero from '@/components/Hero/Hero';
-import NewsPreview from '@/components/NewsPreview/NewsPreview';
-import Partners from '@/components/Partners/Partners';
-import TelegramPreview from '@/components/TelegramPreview/TelegramPreview';
 import { getDictionary } from '@/dictionaries';
 import { getOrganizationJsonLd } from '@/libs/utils/json-ld';
 import { SupportedLanguage } from '@/models/locale';
@@ -27,7 +21,10 @@ export default async function Home(props: HomeProps) {
         id="organization-jsonld"
         type="application/ld+json"
       />
+        <Banner lang={params.lang} />
     </>
   );
 }
-//kaan
+
+// kaan
+

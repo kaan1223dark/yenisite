@@ -83,7 +83,7 @@ export async function POST(request: NextRequest) {
     const eventId = payment.registration?.[0]?.event?.eventId;
     const strapiUrl = `/api/events/${eventId}?populate=Registration.RoleToGive`;
     const strapiEvent = await getStrapiData<APIResponse<'api::event.event'>>(
-      'fi', // Does not matter here. We only need the role to give.
+      'tr', // Does not matter here. We only need the role to give.
       strapiUrl,
       [`event-${eventId}`],
       true,
@@ -164,3 +164,4 @@ export async function POST(request: NextRequest) {
 
   return NextResponse.json({ message: 'OK' }, { status: 200 });
 }
+

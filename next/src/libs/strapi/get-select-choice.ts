@@ -18,7 +18,7 @@ export const getSelectChoice = (
       questionIndex
     ]?.ChoicesEn.split(',') ?? [];
 
-  return lang === 'fi'
+  return lang === 'tr'
     ? choicesFiArray[parseInt(answer, 10)]
     : choicesEnArray[parseInt(answer, 10)];
 };

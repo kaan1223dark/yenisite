@@ -150,9 +150,9 @@ export default async function OwnEvents(props: OwnEventsProps) {
   );
 
   const registrationsFormatted = userEventRegistrations.map((registration) => ({
-    name: registration.event[params.lang === 'fi' ? 'nameFi' : 'nameEn'],
+    name: registration.event[params.lang === 'tr' ? 'nameFi' : 'nameEn'],
     location:
-      registration.event[params.lang === 'fi' ? 'locationFi' : 'locationEn'],
+      registration.event[params.lang === 'tr' ? 'locationFi' : 'locationEn'],
     startDate: registration.event.startDate,
     endDate: registration.event.endDate,
     price: registration.price,

@@ -197,8 +197,8 @@ export async function eventExport(lang: SupportedLanguage, eventId: number) {
     .toISOString()
     .slice(0, -5);
 
-  const eventName = lang === 'fi' ? event.nameFi : event.nameEn;
-  const eventLocation = lang === 'fi' ? event.locationFi : event.locationEn;
+  const eventName = lang === 'tr' ? event.nameFi : event.nameEn;
+  const eventLocation = lang === 'tr' ? event.locationFi : event.locationEn;
 
   const keys = {
     event: dictionary.general.event.toUpperCase(),

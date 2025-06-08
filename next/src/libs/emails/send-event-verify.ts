@@ -26,7 +26,7 @@ export const sendEventReceiptEmail = async ({
 }: SendEventReceiptProps): Promise<boolean> => {
   try {
     const dictionary = await getDictionary(
-      payment.language === 'EN' ? 'en' : 'fi',
+      payment.language === 'EN' ? 'en' : 'tr',
     );
 
     const emailFi = LuuppiEventReceiptFi({
@@ -36,7 +36,7 @@ export const sendEventReceiptEmail = async ({
       events: payment.registration.map((registration) => ({
         name: registration.event.nameFi,
         date: firstLetterToUpperCase(
-          registration.event.startDate.toLocaleString('fi', shortDateFormat),
+          registration.event.startDate.toLocaleString('tr', shortDateFormat),
         ),
         location: registration.event.locationFi,
         price: registration.price,

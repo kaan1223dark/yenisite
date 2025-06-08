@@ -17,7 +17,7 @@ const getDaysOfWeek = (locale: SupportedLanguage) => {
     );
   }
 
-  if (locale === 'fi') {
+  if (locale === 'tr') {
     daysOfWeek.push(daysOfWeek.shift());
   }
 
@@ -29,7 +29,7 @@ const groupEventsByStartDate = (events: Event[]): Record<string, Event[]> =>
     .filter((e) => e.start)
     .reduce(
       (acc, event) => {
-        const startDate = new Intl.DateTimeFormat('fi', {
+        const startDate = new Intl.DateTimeFormat('tr', {
           timeZone: 'Europe/Helsinki',
           year: 'numeric',
           month: '2-digit',
@@ -54,7 +54,7 @@ const generateMonthGrid = (
   const firstDayOfMonth = new Date(year, month, 1).getDay();
   const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-  const offset = locale === 'fi' ? -1 : 0;
+  const offset = locale === 'tr' ? -1 : 0;
   let adjustedFirstDay = (firstDayOfMonth + offset) % 7;
   if (adjustedFirstDay < 0) adjustedFirstDay += 7;
 

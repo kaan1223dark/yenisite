@@ -83,7 +83,7 @@ export default function QuestionDialog({
       (answer) => answer.question === `select-${index}`,
     )?.answer;
 
-    return lang === 'fi'
+    return lang === 'tr'
       ? choicesFiArray[parseInt(answer ?? '0', 10)]
       : choicesEnArray[parseInt(answer ?? '0', 10)];
   };
@@ -115,10 +115,10 @@ export default function QuestionDialog({
               maxLength={question.MaxLength}
               minLength={question.MinLength}
               placeholder={
-                lang === 'fi' ? question.QuestionFi : question.QuestionEn
+                lang === 'tr' ? question.QuestionFi : question.QuestionEn
               }
               required={question.Required}
-              title={lang === 'fi' ? question.QuestionFi : question.QuestionEn}
+              title={lang === 'tr' ? question.QuestionFi : question.QuestionEn}
               value={
                 ctx.data?.answers.find(
                   (answer) => answer.question === `text-${index}`,
@@ -132,10 +132,10 @@ export default function QuestionDialog({
               id={`select-${index}`}
               marginTop={false}
               options={getQuestionChoices(
-                lang === 'fi' ? question.ChoicesFi : question.ChoicesEn,
+                lang === 'tr' ? question.ChoicesFi : question.ChoicesEn,
               )}
               required={true}
-              title={lang === 'fi' ? question.QuestionFi : question.QuestionEn}
+              title={lang === 'tr' ? question.QuestionFi : question.QuestionEn}
               value={getSelectValue(question, index)}
             />
           ))}
@@ -149,7 +149,7 @@ export default function QuestionDialog({
               }
               id={`checkbox-${index}`}
               required={false}
-              title={lang === 'fi' ? question.QuestionFi : question.QuestionEn}
+              title={lang === 'tr' ? question.QuestionFi : question.QuestionEn}
             />
           ))}
         </div>
