@@ -22,7 +22,7 @@
     "@azure/msal-node": "^2.15.0",
     "@formatjs/intl-localematcher": "^0.5.4",
     "@fullcalendar/core": "^6.1.15",
-    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/daygrid": "^6.1.17",
     "@fullcalendar/react": "^6.1.15",
     "@fullcalendar/timegrid": "^6.1.15",
     "@marsidev/react-turnstile": "^1.0.2",
