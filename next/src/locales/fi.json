@@ -169,10 +169,10 @@
   "navigation": {
     "home": "Anasayfa",
     "songbook": "Şarkı kitabı",
-    "organization": "Organizasyon",
+    "organization": "Hakkımızda",
     "introduction": "Giriş",
-    "studies": "Çalışmalar",
-    "tutoring": "Özel ders",
+    "studies": "Etkinlik Grupları",
+    "tutoring": "Özel Ders",
     "events": "Etkinlikler",
     "news": "Haberler",
     "communication": "Topluluk",
@@ -382,3 +382,4 @@
     "return_home": "Palaa kotisivulle"
   }
 }
+

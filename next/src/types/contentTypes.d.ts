@@ -1,4 +1,4 @@
-import type { Schema, Attribute } from '@strapi/strapi';
+import type { Attribute, Schema } from '@strapi/strapi';
 
 export interface AdminPermission extends Schema.CollectionType {
   collectionName: 'admin_permissions';
@@ -1198,6 +1198,40 @@ export interface ApiEventEvent extends Schema.CollectionType {
   };
 }
 
+export interface ApiGruplarsGruplars extends Schema.CollectionType {
+  collectionName: 'gruplars';
+  info: {
+    singularName: 'gruplar';
+    pluralName: 'gruplars';
+    displayName: 'gruplars';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    TitleTr: Attribute.String & Attribute.Required;
+    DescriptionTr: Attribute.Blocks & Attribute.Required;
+    Image: Attribute.Media<'images'>;
+    TitleEn: Attribute.String & Attribute.Required;
+    DescriptionEn: Attribute.Blocks & Attribute.Required;
+    ImageEn: Attribute.Media<'images'>;
+    slug: Attribute.UID;
+    createdBy: Attribute.Relation<
+      'api::gruplar.gruplar',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::gruplar.gruplar',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiEventRoleEventRole extends Schema.CollectionType {
   collectionName: 'event_roles';
   info: {
@@ -2356,6 +2390,7 @@ declare module '@strapi/types' {
       'api::company.company': ApiCompanyCompany;
       'api::contact.contact': ApiContactContact;
       'api::event.event': ApiEventEvent;
+      'api::gruplar.gruplar': ApiGruplarsGruplars;
       'api::event-role.event-role': ApiEventRoleEventRole;
       'api::events-calendar.events-calendar': ApiEventsCalendarEventsCalendar;
       'api::luuppi-sanomat.luuppi-sanomat': ApiLuuppiSanomatLuuppiSanomat;
@@ -2379,3 +2414,4 @@ declare module '@strapi/types' {
     }
   }
 }
+

@@ -9,16 +9,13 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'http',
-        hostname: 'localhost',
+        hostname: '156.67.63.251',
         port: '1337',
         pathname: '/uploads/**',
       },
       {
         protocol: 'https',
-        hostname: process.env.NEXT_PUBLIC_STRAPI_BASE_URL.replace(
-          'https://',
-          '',
-        ),
+        hostname: process.env.NEXT_PUBLIC_STRAPI_BASE_HOST,
         pathname: '/uploads/**',
       },
     ],

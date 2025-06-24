@@ -5,19 +5,15 @@ import Link from 'next/link';
 import {
   FaDiscord,
   FaFacebook,
-  FaGithub,
   FaInstagram,
-  FaLinkedin,
   FaTelegram,
   FaTiktok,
 } from 'react-icons/fa';
 import luuppiSvg from '../../../public/luuppi.svg';
-
 interface FooterProps {
   dictionary: Dictionary;
   lang: SupportedLanguage;
 }
-
 export default function Footer({ dictionary, lang }: FooterProps) {
   return (
     <footer className="bg-primary-500 py-12">
@@ -65,43 +61,29 @@ export default function Footer({ dictionary, lang }: FooterProps) {
                 width={95}
               />
               <div className="flex flex-col text-sm text-white">
-                <p>{new Date().getFullYear()} © Luuppi ry</p>
-                <p className="text-xs">
-                  {dictionary.general.business_id}: 0512347-2
-                </p>
+                <p>2025 © Finike Etkinlik</p>
+                <p className="text-xs">create by kağan</p>
               </div>
             </div>
           </div>
           <div className="flex gap-4">
-            <Link aria-label="Telegram" href="https://t.me/Luuppi">
+            <Link aria-label="Telegram" href="">
               <FaTelegram className="text-white" size={20} />
             </Link>
-            <Link aria-label="GitHub" href="https://github.com/luuppiry">
-              <FaGithub className="text-white" size={20} />
-            </Link>
-            <Link
-              aria-label="Facebook"
-              href="https://www.facebook.com/luuppiry"
-            >
+            <Link aria-label="Facebook" href="">
               <FaFacebook className="text-white" size={20} />
             </Link>
-            <Link aria-label="TikTok" href="https://www.tiktok.com/@luuppiry">
+            <Link aria-label="TikTok" href="">
               <FaTiktok className="text-white" size={20} />
             </Link>
-            <Link
-              aria-label="Instagram"
-              href="https://www.instagram.com/luuppiry/"
-            >
+            <Link aria-label="Instagram" href="https://www.instagram.com/finike_etkinlik/">
               <FaInstagram className="text-white" size={20} />
-            </Link>
-            <Link aria-label="Discord" href="https://discord.gg/HZkwtwFmDK">
-              <FaDiscord className="text-white" size={20} />
             </Link>
             <Link
               aria-label="Discord"
-              href="https://www.linkedin.com/company/luuppi-ry"
+              href=""
             >
-              <FaLinkedin className="text-white" size={20} />
+              <FaDiscord className="text-white" size={20} />
             </Link>
           </div>
         </div>
